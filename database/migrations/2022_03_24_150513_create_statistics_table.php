@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateMessagesTable extends Migration
+class CreateStatisticsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,12 @@ class CreateMessagesTable extends Migration
      */
     public function up()
     {
-        Schema::create('messages', function (Blueprint $table) {
+        Schema::create('statistics', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('apartment_id')->nullable();
             $table->foreign('apartment_id')->references('id')->on('apartments')->onDelete('set null');
-            $table->string('name');
-            $table->string('email');
-            $table->text('text');
+            $table->date('date');
+            $table->string('user_ip');
             $table->timestamps();
         });
     }
@@ -31,8 +30,8 @@ class CreateMessagesTable extends Migration
      */
     public function down()
     {
-        Schema::table('messages', function (Blueprint $table) {
-            $table->dropForeign('messages_apartment_id_foreign');
+        Schema::table('statistics', function (Blueprint $table) {
+            $table->dropForeign('statistics_apartment_id_foreign');
             $table->dropColumn('apartment_id');
         });
     }

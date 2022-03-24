@@ -38,8 +38,8 @@ class CreateApartmentsTable extends Migration
      */
     public function down()
     {
-        Schema::table('apartaments', function (Blueprint $table) {
-            $table->dropForeign('apartaments_user_id_foreign');
+        Schema::table('apartments', function (Blueprint $table) {
+            $table->dropForeign('apartments_user_id_foreign');
             $table->dropColumn('user_id');
         });
     }
