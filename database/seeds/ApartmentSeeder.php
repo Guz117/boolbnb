@@ -15,6 +15,16 @@ class ApartmentSeeder extends Seeder
         $apartments = [
             [
                 'title' => '',
+                'price' => 3,
+                'rooms' => 4,
+                'beds' => 2,
+                'bathrooms' => 1,
+                'square' => 4,
+                'address' => '',
+                'latitude' => '',
+                'longitude' => '',
+                'image' => '',
+                'visible' => 1,
             ]
         ];
     }
