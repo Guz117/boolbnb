@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\Apartment;
 
 class ApartmentSeeder extends Seeder
 {
@@ -11,6 +12,10 @@ class ApartmentSeeder extends Seeder
      */
     public function run()
     {
-        //
+        $apartments = [
+            [
+                'title' => '',
+            ]
+        ];
     }
 }

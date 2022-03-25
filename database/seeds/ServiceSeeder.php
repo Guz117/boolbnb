@@ -15,22 +15,55 @@ class ServiceSeeder extends Seeder
     {
         $services = [
             [
-                'name' => '',
+                'name' => 'WiFi',
             ],
             [
-                'name' => '',
+                'name' => 'Posto Macchina',
             ],
             [
-                'name' => '',
+                'name' => 'Piscina',
             ],
             [
-                'name' => '',
+                'name' => 'Portineria',
             ],
             [
-                'name' => '',
+                'name' => 'Sauna',
             ],
             [
-                'name' => '',
+                'name' => 'Vista Mare',
+            ],
+            [
+                'name' => 'Bidet',
+            ],
+            [
+                'name' => 'Cuscini, coperte extra',
+            ],
+            [
+                'name' => 'Ferro da stiro',
+            ],
+            [
+                'name' => 'Aria condizionata',
+            ],
+            [
+                'name' => 'Cucina',
+            ],
+            [
+                'name' => 'Balcone',
+            ],
+            [
+                'name' => 'TV',
+            ],
+            [
+                'name' => 'Cassaforte',
+            ],
+            [
+                'name' => 'Colazione',
+            ],
+            [
+                'name' => 'Macchina del caffé',
+            ],
+            [
+                'name' => 'Tavolo da pranzo',
             ],
         ];
 
