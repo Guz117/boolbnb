@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 use Illuminate\Support\Facades\Storage;
 use App\Apartment;
+use App\Service;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -49,6 +50,7 @@ class ApartmentController extends Controller
      */
     public function show(Apartment $apartment)
     {
+        // $services = Service::where();
         return view('admin.apartments.show', ['apartment' => $apartment]);
     }
 
@@ -60,7 +62,8 @@ class ApartmentController extends Controller
      */
     public function edit($id)
     {
-        //
+        $apartments = Apartment::where('user_id', Auth::user()->id)->get();
+        return view('admin.apartments.edit', ['apartment' => $apartment]);
     }
 
     /**

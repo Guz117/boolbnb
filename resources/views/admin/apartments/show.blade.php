@@ -16,7 +16,13 @@
              <h3>{{ $apartment->address }}</h3>
              <h3>Price: {{ $apartment->price }}&euro;</h3>
              <h3>Rooms: {{ $apartment->rooms }}</h3>
-             <h3>Bathrooms: {{ $apartment->bathroom }}</h3>
+             <h3>Bathrooms: {{ $apartment->bathrooms }}</h3>
+             <h3>Services:</h3>
+             @foreach ($apartment->services()->get() as $service)
+                <span class="badge rounded-pill bg-secondary">
+                {{ $service->name }}
+                </span>
+            @endforeach
              <h3>Square: {{ $apartment->square }}m<sup>3</sup></h3>
              <h3>Latitude: {{ $apartment->latitude }}</h3>
              <h3>Longitude: {{ $apartment->longitude }}</h3>
