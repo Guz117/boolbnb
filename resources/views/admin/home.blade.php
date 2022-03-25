@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 
 @section('content')
 <div class="container">
@@ -15,6 +15,7 @@
                     @endif
 
                     {{ __('You are logged in!') }}
+                    <a href="{{ url('/admin/apartments') }}" class="btn btn-primary">View Apartment</a>
                 </div>
             </div>
         </div>
