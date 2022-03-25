@@ -28,7 +28,7 @@ class ApartmentController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**
@@ -60,10 +60,10 @@ class ApartmentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Apartment $apartment)
     {
-        $apartments = Apartment::where('user_id', Auth::user()->id)->get();
-        return view('admin.apartments.edit', ['apartment' => $apartment]);
+        $services = Service::all();
+        return view('admin.apartments.edit', ['apartment' => $apartment, 'services'=>$services]);
     }
 
     /**
@@ -73,9 +73,10 @@ class ApartmentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Apartment $aparment)
     {
-        //
+        //$data = $request->all();
+        return redirect()->route('admin.apartment.show', $aparment);
     }
 
     /**
