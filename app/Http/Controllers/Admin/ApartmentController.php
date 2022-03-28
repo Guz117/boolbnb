@@ -31,33 +31,7 @@ class ApartmentController extends Controller
     {
         $services = Service::all();
         return view('admin.apartments.create', ['services' => $services]);
-        $validateData = $request->validate([
-            'title' => 'required|max:255',
-            'price' => 'required',
-            'rooms' => 'required',
-            'beds' => 'required',
-            'bathrooms' => 'required',
-            'address' => 'required|max:255',
-            'square' => 'required',
-            'latitude' => 'required',
-            'longitude' => 'required',
-            'visible' => 'required|numeric|min:0|max:1',
-            'image' => 'nullable|image',
-            'services.*' => 'nullable|exists:App\Service,id',
-        ]);
-        if (!empty($data['image'])) {
-            $img_path = Storage::put('uploads', $data['image']);
-            $data['image'] = $img_path;
-        }
-        $apartment = new Apartment();
-        $apartment->fill($data);
-        $apartment->save();
-        if (!empty($data['services'])) {
-            $apartment->services()->attach($data['services']);
-        }
-        return redirect()->route('admin.posts.show', $apartment);
     }
-
     /**
      * Store a newly created resource in storage.
      *
