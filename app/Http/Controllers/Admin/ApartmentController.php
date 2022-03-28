@@ -50,12 +50,12 @@ class ApartmentController extends Controller
             $data['image'] = $img_path;
         }
         $apartment = new Apartment();
-        $aparment->fill($data);
+        $apartment->fill($data);
         $apartment->save();
         if (!empty($data['services'])) {
             $apartment->services()->attach($data['services']);
         }
-        return redirect()->route('admin.posts.show', $aparment);
+        return redirect()->route('admin.posts.show', $apartment);
     }
 
     /**
