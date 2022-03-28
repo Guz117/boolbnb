@@ -25,7 +25,7 @@ class ApartmentSeeder extends Seeder
                 'address' => 'Via Cesare Battisti 4, 74121 taranto TA, Italia',
                 'latitude' => '40.4657082',
                 'longitude' => '17.277969',
-                'image' => 'imgtest.jpg',
+                'image' => 'camera_1.jpg',
                 'visible' => 1,
             ],
             [
@@ -38,7 +38,7 @@ class ApartmentSeeder extends Seeder
                 'address' => 'Taranto, Porto Mercantile, Via Napoli, 74123 taranto TA, Italia',
                 'latitude' => '40.4811812',
                 'longitude' => '17.2240546',
-                'image' => 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fbusinessblog.trivago.com%2Fit%2Fconsigli-risparmiare-tempo-bandb%2F&psig=AOvVaw2wAFBOEkDvi2oRPHIv-p-o&ust=1648286839860000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCOCFsJD54PYCFQAAAAAdAAAAABAT',
+                'image' => 'camera_2.jpg',
                 'visible' => 1,
             ],
             [
@@ -51,7 +51,7 @@ class ApartmentSeeder extends Seeder
                 'address' => 'Viale Magna Grecia, 74121 taranto TA, Italia',
                 'latitude' => '40.4515739',
                 'longitude' => '17.2586717',
-                'image' => 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.lestanzediluca.it%2F&psig=AOvVaw2wAFBOEkDvi2oRPHIv-p-o&ust=1648286839860000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCOCFsJD54PYCFQAAAAAdAAAAABAZ',
+                'image' => 'camera_3.jpg',
                 'visible' => 1,
             ],
             [
@@ -64,7 +64,7 @@ class ApartmentSeeder extends Seeder
                 'address' => 'Via Pitagora, 74100 taranto TA, Italia',
                 'latitude' => '40.4730853',
                 'longitude' => '17.2438253',
-                'image' => 'https://bebcasagentile.it/wp-content/uploads/2019/04/camera-singola.jpg',
+                'image' => 'camera_4.jpg',
                 'visible' => 1,
             ],
             [
@@ -77,7 +77,7 @@ class ApartmentSeeder extends Seeder
                 'address' => 'Corso Vittorio Emanuele II, 74123 taranto TA, Italia',
                 'latitude' => '40.47373931216487',
                 'longitude' => '17.23144763298916',
-                'image' => 'http://www.bb-j24.it/wp-content/uploads/2019/11/J24_Kandinsky_Room_01.jpg',
+                'image' => 'camera_5.jpg',
                 'visible' => 1,
             ],
             [
@@ -90,7 +90,7 @@ class ApartmentSeeder extends Seeder
                 'address' => 'Viale delle Murge, 70125 Bari BA, Italia',
                 'latitude' => '41.11100053451946',
                 'longitude' => '16.85445589639005',
-                'image' => 'https://images.pexels.com/photos/584399/living-room-couch-interior-room-584399.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+                'image' => 'camera_6.jpg',
                 'visible' => 1,
             ],
             [
@@ -103,7 +103,7 @@ class ApartmentSeeder extends Seeder
                 'address' => 'Via Somalia, 70121 Bari BA, Italia',
                 'latitude' => '41.12012896905523',
                 'longitude' => '16.882730732499766',
-                'image' => 'https://images.pexels.com/photos/1743227/pexels-photo-1743227.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+                'image' => 'camera_7.jpg',
                 'visible' => 1,
             ],
             [
@@ -116,7 +116,7 @@ class ApartmentSeeder extends Seeder
                 'address' => 'Via Raffaele Viviani, 70132 Bari BA, Italia',
                 'latitude' => '41.138498385885185',
                 'longitude' => '16.81929810715667',
-                'image' => 'https://images.pexels.com/photos/698170/pexels-photo-698170.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+                'image' => 'camera_8.jpg',
                 'visible' => 1,
             ],
             [
@@ -129,7 +129,7 @@ class ApartmentSeeder extends Seeder
                 'address' => 'Via Tenente Cesare Suglia, 74126 Bari BA, Italia',
                 'latitude' => '41.10203622540266',
                 'longitude' => '16.917565347942855',
-                'image' => 'https://images.pexels.com/photos/1428348/pexels-photo-1428348.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+                'image' => 'camera_9.jpg',
                 'visible' => 1,
             ],
             [
@@ -142,7 +142,7 @@ class ApartmentSeeder extends Seeder
                 'address' => 'Via Virgilio, 70019 Triggiano BA, Italia',
                 'latitude' => '41.06068893163646',
                 'longitude' => '16.923002839056636',
-                'image' => 'https://images.pexels.com/photos/271618/pexels-photo-271618.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+                'image' => 'camera_10.jpg',
                 'visible' => 1,
             ],
             [
@@ -155,7 +155,7 @@ class ApartmentSeeder extends Seeder
                 'address' => 'Via Florida, 38066 Riva del Garda TN, Italia',
                 'latitude' => '45.886051',
                 'longitude' => '10.840772',
-                'image' => 'https://st3.idealista.it/news/archivie/styles/imagen_big_lightbox/public/2017-03/monolocale1.jpg?sv=hh3qdXsy&itok=NIN3q0vA',
+                'image' => 'camera_11.jpg',
                 'visible' => 1,
             ],
             [
@@ -168,7 +168,7 @@ class ApartmentSeeder extends Seeder
                 'address' => 'Piazza Tre Novembre, 38066 Riva del Garda TN, Italia',
                 'latitude' => '45.885142',
                 'longitude' => '10.839496',
-                'image' => 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/340304013.jpg?k=2b286a50d62777ab59a90699c85364de6369a2bf2254474a42473df617920feb&o=&hp=1',
+                'image' => 'camera_12.jpg',
                 'visible' => 1,
             ],
             [
@@ -181,7 +181,7 @@ class ApartmentSeeder extends Seeder
                 'address' => 'Via Marocco, 38066 Riva del Garda TN, Italia',
                 'latitude' => '45.885362',
                 'longitude' => '10.838709',
-                'image' => 'https://www.lago.it/wp-content/uploads/2018/05/1_Lanfranchi_Lago-Milano-9.jpg',
+                'image' => 'camera_13.jpg',
                 'visible' => 1,
             ],
             [
@@ -194,7 +194,7 @@ class ApartmentSeeder extends Seeder
                 'address' => 'Via Giuseppe Cipelli, 38066 Biacesa di Ledro TN, Italia',
                 'latitude' => '45.865736',
                 'longitude' => '10.806008',
-                'image' => 'https://www.familygo.eu/wp-content/uploads/2019/12/trentino-valle-di-ledro-villaggio-val-molini-app-haus-cadria.jpg',
+                'image' => 'camera_14.jpg',
                 'visible' => 1,
             ],
             [
@@ -207,7 +207,7 @@ class ApartmentSeeder extends Seeder
                 'address' => 'Via Domenico Degasperi, 44, 38066 Riva del Garda TN, Italia',
                 'latitude' => '45.911488',
                 'longitude' => '10.812156',
-                'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjgHkGyEYzvyFeIwaQktQw6exsOUH-ZbcvXw&usqp=CAU',
+                'image' => 'camera_15.jpg',
                 'visible' => 1,
             ],
             [
@@ -220,7 +220,7 @@ class ApartmentSeeder extends Seeder
                 'address' => 'Via Lazzaretto, 24068 Seriate BG, Italia',
                 'latitude' => '45.6734127',
                 'longitude' => '9.731943',
-                'image' => 'https://www.agriturismocorteaurea.it/wp-content/uploads/2017/06/aca-2-3.jpg',
+                'image' => 'camera_16.jpg',
                 'visible' => 1,
             ],
             [
@@ -233,7 +233,7 @@ class ApartmentSeeder extends Seeder
                 'address' => 'Ciclovia delle Rogge, 224022 Alzano Lombardo BG',
                 'latitude' => '45.73681',
                 'longitude' => '9.72638',
-                'image' => 'https://www.domusilpalio.it/assets/img/deluxe_room.jpg',
+                'image' => 'camera_17.jpg',
                 'visible' => 1,
             ],
             [
@@ -246,7 +246,7 @@ class ApartmentSeeder extends Seeder
                 'address' => 'Via Borgo Santa Caterina, 724124 Bergamo BG',
                 'latitude' => '45.7050425',
                 'longitude' => '9.6811173',
-                'image' => 'https://static.designmag.it/designmag/fotogallery/780X0/78971/camera-doppia-bed-and-breakfast.jpg',
+                'image' => 'camera_18.jpg',
                 'visible' => 1,
             ],
             [
@@ -259,7 +259,7 @@ class ApartmentSeeder extends Seeder
                 'address' => 'Via dei Celestini, 1024124 Bergamo BG',
                 'latitude' => '45.69601',
                 'longitude' => '9.66721',
-                'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3mu1Qk23mvllvmm2j9M1URhBGUNYfgxVxCg&usqp=CAU',
+                'image' => 'camera_19.jpg',
                 'visible' => 1,
             ],
             [
@@ -272,7 +272,7 @@ class ApartmentSeeder extends Seeder
                 'address' => 'Via Borgo Palazzo, 13024125 Bergamo BG',
                 'latitude' => '45.6955012',
                 'longitude' => '9.6850876',
-                'image' => 'https://www.bebportadicastro.it/wp-content/uploads/2016/10/beb-palermo-homepage4.jpg',
+                'image' => 'camera_20.jpg',
                 'visible' => 0,
             ],
         ];
