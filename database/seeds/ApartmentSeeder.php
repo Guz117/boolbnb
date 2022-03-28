@@ -25,7 +25,7 @@ class ApartmentSeeder extends Seeder
                 'address' => 'Via Cesare Battisti 4, 74121 taranto TA, Italia',
                 'latitude' => '40.4657082',
                 'longitude' => '17.277969',
-                'image' => 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.aduepassidalmondo.it%2Fstanze%2F&psig=AOvVaw2wAFBOEkDvi2oRPHIv-p-o&ust=1648286839860000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCOCFsJD54PYCFQAAAAAdAAAAABAI',
+                'image' => 'imgtest.jpg',
                 'visible' => 1,
             ],
             [
