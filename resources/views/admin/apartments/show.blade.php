@@ -31,7 +31,6 @@
     <div class="col">
         {{-- <img class="img-fluid" src="{{ asset('storage/' . $apartment->image) }}" alt="{{ $apartment->title }}"> --}}
     </div>
-    <a class="btn btn-primary mt-5" href="{{url()->previous()}}">CANCEL</a>
-    <a class="btn btn-primary mt-5" href="{{ route('admin.apartments.index') }}">HOME</a>
+    <a class="btn btn-primary mt-5" href="{{ route('admin.apartments.index') }}">My Apartments</a>
 </div>
 @endsection

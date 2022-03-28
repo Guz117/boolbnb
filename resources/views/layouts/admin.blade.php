@@ -21,59 +21,62 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
-                        <!-- Authentication Links -->
-                        @guest
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                            </li>
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                            @endif
-                        @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
+        {{-- <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+            <img src="{{asset('img/logoBoolBnb.png')}}" alt="logo" class="">
+        </nav> --}}
+        <main>
+            <div class="container-fluid mt-5">
+                <div class='row'>
+                    <nav id='sidebarMenu' class='col-2 d-md-block bg-light sidebar collapse me-5'>
+                        <div class="d-flex flex-column flex-shrink-0 p-3 bg-light" style="width: 280px;">
+                            <ul class="nav nav-pills flex-column mb-auto">
+                              <li class="nav-item">
+                                <a href="{{ url('/') }}" class="nav-link active" aria-current="page">
+                                <i class="bi bi-house-door-fill"></i>
+                                  Home
                                 </a>
+                              </li>
+                              <li>
+                                <a href="{{ route('admin.apartments.index') }}" class="nav-link">
+                                  <svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"></use></svg>
+                                  My apartment
+                                </a>
+                              </li>
+                              <li>
+                                <a href="{{ route('admin.apartments.create') }}" class="nav-link">
+                                  <svg class="bi me-2" width="16" height="16"><use xlink:href="#table"></use></svg>
+                                  Create apartment
+                                </a>
+                              </li>
+                            </ul>
+                            <hr>
+                            <div class="dropdown">
+                              <a href="#" class="d-flex align-items-center text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
+                                <strong>{{ Auth::user()->name }}</strong>
+                              </a>
+                              <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
+                                <li><a class="dropdown-item" href="{{ route('admin.apartments.create') }}">New apartment...</a></li>
+                                <li><a class="dropdown-item" href="{{ route('admin.apartments.index') }}">Profile</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item"  href="{{ route('logout') }}"
+                                    onclick="event.preventDefault();
+                                                  document.getElementById('logout-form').submit();">
+                                     {{ __('Logout') }}
+                                 </a>
 
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        @endguest
-                    </ul>
+                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                     @csrf
+                                 </form></li>
+                              </ul>
+                            </div>
+                          </div>
+                    </nav>
+                    <div class='col-9'>
+                        @yield('content')
+                    </div>
                 </div>
             </div>
-        </nav>
-
-        <main class="py-4">
-            @yield('content')
         </main>
     </div>
 </body>
