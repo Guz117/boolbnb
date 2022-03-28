@@ -3,6 +3,7 @@
 use Illuminate\Database\Seeder;
 use App\Apartment;
 use App\User;
+use Illuminate\Support\Str;
 
 class ApartmentSeeder extends Seeder
 {
@@ -91,7 +92,7 @@ class ApartmentSeeder extends Seeder
                 'longitude' => '16.85445589639005',
                 'image' => 'https://images.pexels.com/photos/584399/living-room-couch-interior-room-584399.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
                 'visible' => 1,
-                ],
+            ],
             [
                 'title' => 'LILLA - Appartamento centrale e confortevole',
                 'price' => 29,
@@ -149,7 +150,7 @@ class ApartmentSeeder extends Seeder
                 'price' => 90,
                 'rooms' => 1,
                 'beds' => 2,
-                'bathrooms' => 1, 
+                'bathrooms' => 1,
                 'square' => 35,
                 'address' => 'Via Florida, 38066 Riva del Garda TN, Italia',
                 'latitude' => '45.886051',
@@ -280,6 +281,7 @@ class ApartmentSeeder extends Seeder
             $newApartment = new Apartment();
             $newApartment->user_id = User::inRandomOrder()->first()->id;
             $newApartment->fill($apartment);
+            $newApartment->slug =  Str::slug($newApartment->title . '-');
             $newApartment->save();
         }
     }

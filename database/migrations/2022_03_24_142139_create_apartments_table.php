@@ -18,6 +18,7 @@ class CreateApartmentsTable extends Migration
             $table->unsignedBigInteger('user_id')->nullable();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('set null');
             $table->string('title');
+            $table->string('slug');
             $table->integer('rooms');
             $table->string('price');
             $table->integer('beds');

@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Admin;
+
 use Illuminate\Support\Facades\Storage;
 use App\Apartment;
 use App\Service;
@@ -62,11 +63,12 @@ class ApartmentController extends Controller
         }
         $apartment = new Apartment();
         $apartment->fill($data);
+        $apartment->slug = $apartment->createSlug($data['title']);
         $apartment->save();
         if (!empty($data['services'])) {
             $apartment->services()->attach($data['services']);
         }
-        return redirect()->route('admin.apartments.show', $apartment->id);
+        return redirect()->route('admin.apartments.show', $apartment->slug);
     }
 
     /**
@@ -90,7 +92,7 @@ class ApartmentController extends Controller
     public function edit(Apartment $apartment)
     {
         $services = Service::all();
-        return view('admin.apartments.edit', ['apartment' => $apartment, 'services'=>$services]);
+        return view('admin.apartments.edit', ['apartment' => $apartment, 'services' => $services]);
     }
 
     /**
@@ -122,7 +124,9 @@ class ApartmentController extends Controller
         ]);
         if ($data['title'] != $apartment->title) {
             $apartment->title = $data['title'];
+            $apartment->slug = $apartment->createSlug($data['title']);
         }
+
         if ($data['price'] != $apartment->price) {
             $apartment->price = $data['price'];
         }
@@ -158,7 +162,7 @@ class ApartmentController extends Controller
         }
         $apartment->update();
         if (!empty($data['services'])) {
-            $apartment->services()->sync($data['services']); 
+            $apartment->services()->sync($data['services']);
         } else {
             $apartment->services()->detach();
         }
