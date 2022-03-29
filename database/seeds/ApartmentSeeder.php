@@ -25,7 +25,7 @@ class ApartmentSeeder extends Seeder
                 'address' => 'Via Cesare Battisti 4, 74121 taranto TA, Italia',
                 'latitude' => '40.4657082',
                 'longitude' => '17.277969',
-                'image' => 'camera_1.jpg',
+                'image' => 'uploads/camera_1.jpg',
                 'visible' => 1,
             ],
             [
@@ -38,7 +38,7 @@ class ApartmentSeeder extends Seeder
                 'address' => 'Taranto, Porto Mercantile, Via Napoli, 74123 taranto TA, Italia',
                 'latitude' => '40.4811812',
                 'longitude' => '17.2240546',
-                'image' => 'camera_2.jpg',
+                'image' => 'uploads/camera_2.jpg',
                 'visible' => 1,
             ],
             [
@@ -51,7 +51,7 @@ class ApartmentSeeder extends Seeder
                 'address' => 'Viale Magna Grecia, 74121 taranto TA, Italia',
                 'latitude' => '40.4515739',
                 'longitude' => '17.2586717',
-                'image' => 'camera_3.jpg',
+                'image' => 'uploads/camera_3.jpg',
                 'visible' => 1,
             ],
             [
@@ -64,7 +64,7 @@ class ApartmentSeeder extends Seeder
                 'address' => 'Via Pitagora, 74100 taranto TA, Italia',
                 'latitude' => '40.4730853',
                 'longitude' => '17.2438253',
-                'image' => 'camera_4.jpg',
+                'image' => 'uploads/camera_4.jpg',
                 'visible' => 1,
             ],
             [
@@ -77,7 +77,7 @@ class ApartmentSeeder extends Seeder
                 'address' => 'Corso Vittorio Emanuele II, 74123 taranto TA, Italia',
                 'latitude' => '40.47373931216487',
                 'longitude' => '17.23144763298916',
-                'image' => 'camera_5.jpg',
+                'image' => 'uploads/camera_5.jpg',
                 'visible' => 1,
             ],
             [
@@ -90,7 +90,7 @@ class ApartmentSeeder extends Seeder
                 'address' => 'Viale delle Murge, 70125 Bari BA, Italia',
                 'latitude' => '41.11100053451946',
                 'longitude' => '16.85445589639005',
-                'image' => 'camera_6.jpg',
+                'image' => 'uploads/camera_6.jpg',
                 'visible' => 1,
             ],
             [
@@ -103,7 +103,7 @@ class ApartmentSeeder extends Seeder
                 'address' => 'Via Somalia, 70121 Bari BA, Italia',
                 'latitude' => '41.12012896905523',
                 'longitude' => '16.882730732499766',
-                'image' => 'camera_7.jpg',
+                'image' => 'uploads/camera_7.jpg',
                 'visible' => 1,
             ],
             [
@@ -116,7 +116,7 @@ class ApartmentSeeder extends Seeder
                 'address' => 'Via Raffaele Viviani, 70132 Bari BA, Italia',
                 'latitude' => '41.138498385885185',
                 'longitude' => '16.81929810715667',
-                'image' => 'camera_8.jpg',
+                'image' => 'uploads/camera_8.jpg',
                 'visible' => 1,
             ],
             [
@@ -129,7 +129,7 @@ class ApartmentSeeder extends Seeder
                 'address' => 'Via Tenente Cesare Suglia, 74126 Bari BA, Italia',
                 'latitude' => '41.10203622540266',
                 'longitude' => '16.917565347942855',
-                'image' => 'camera_9.jpg',
+                'image' => 'uploads/camera_9.jpg',
                 'visible' => 1,
             ],
             [
@@ -142,7 +142,7 @@ class ApartmentSeeder extends Seeder
                 'address' => 'Via Virgilio, 70019 Triggiano BA, Italia',
                 'latitude' => '41.06068893163646',
                 'longitude' => '16.923002839056636',
-                'image' => 'camera_10.jpg',
+                'image' => 'uploads/camera_10.jpg',
                 'visible' => 1,
             ],
             [
@@ -155,7 +155,7 @@ class ApartmentSeeder extends Seeder
                 'address' => 'Via Florida, 38066 Riva del Garda TN, Italia',
                 'latitude' => '45.886051',
                 'longitude' => '10.840772',
-                'image' => 'camera_11.jpg',
+                'image' => 'uploads/camera_11.jpg',
                 'visible' => 1,
             ],
             [
@@ -168,7 +168,7 @@ class ApartmentSeeder extends Seeder
                 'address' => 'Piazza Tre Novembre, 38066 Riva del Garda TN, Italia',
                 'latitude' => '45.885142',
                 'longitude' => '10.839496',
-                'image' => 'camera_12.jpg',
+                'image' => 'uploads/camera_12.jpg',
                 'visible' => 1,
             ],
             [
@@ -181,7 +181,7 @@ class ApartmentSeeder extends Seeder
                 'address' => 'Via Marocco, 38066 Riva del Garda TN, Italia',
                 'latitude' => '45.885362',
                 'longitude' => '10.838709',
-                'image' => 'camera_13.jpg',
+                'image' => 'uploads/camera_13.jpg',
                 'visible' => 1,
             ],
             [
@@ -194,7 +194,7 @@ class ApartmentSeeder extends Seeder
                 'address' => 'Via Giuseppe Cipelli, 38066 Biacesa di Ledro TN, Italia',
                 'latitude' => '45.865736',
                 'longitude' => '10.806008',
-                'image' => 'camera_14.jpg',
+                'image' => 'uploads/camera_14.jpg',
                 'visible' => 1,
             ],
             [
@@ -207,7 +207,7 @@ class ApartmentSeeder extends Seeder
                 'address' => 'Via Domenico Degasperi, 44, 38066 Riva del Garda TN, Italia',
                 'latitude' => '45.911488',
                 'longitude' => '10.812156',
-                'image' => 'camera_15.jpg',
+                'image' => 'uploads/camera_15.jpg',
                 'visible' => 1,
             ],
             [
@@ -220,7 +220,7 @@ class ApartmentSeeder extends Seeder
                 'address' => 'Via Lazzaretto, 24068 Seriate BG, Italia',
                 'latitude' => '45.6734127',
                 'longitude' => '9.731943',
-                'image' => 'camera_16.jpg',
+                'image' => 'uploads/camera_16.jpg',
                 'visible' => 1,
             ],
             [
@@ -233,7 +233,7 @@ class ApartmentSeeder extends Seeder
                 'address' => 'Ciclovia delle Rogge, 224022 Alzano Lombardo BG',
                 'latitude' => '45.73681',
                 'longitude' => '9.72638',
-                'image' => 'camera_17.jpg',
+                'image' => 'uploads/camera_17.jpg',
                 'visible' => 1,
             ],
             [
@@ -246,7 +246,7 @@ class ApartmentSeeder extends Seeder
                 'address' => 'Via Borgo Santa Caterina, 724124 Bergamo BG',
                 'latitude' => '45.7050425',
                 'longitude' => '9.6811173',
-                'image' => 'camera_18.jpg',
+                'image' => 'uploads/camera_18.jpg',
                 'visible' => 1,
             ],
             [
@@ -259,7 +259,7 @@ class ApartmentSeeder extends Seeder
                 'address' => 'Via dei Celestini, 1024124 Bergamo BG',
                 'latitude' => '45.69601',
                 'longitude' => '9.66721',
-                'image' => 'camera_19.jpg',
+                'image' => 'uploads/camera_19.jpg',
                 'visible' => 1,
             ],
             [
@@ -272,7 +272,7 @@ class ApartmentSeeder extends Seeder
                 'address' => 'Via Borgo Palazzo, 13024125 Bergamo BG',
                 'latitude' => '45.6955012',
                 'longitude' => '9.6850876',
-                'image' => 'camera_20.jpg',
+                'image' => 'uploads/camera_20.jpg',
                 'visible' => 0,
             ],
         ];

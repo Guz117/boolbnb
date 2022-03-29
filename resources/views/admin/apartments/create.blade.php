@@ -2,15 +2,15 @@
 
 @section('content')
 <div class="container p-5">
-  <div class="row">
-    @if (session('status'))
-        <div class="alert alert-danger">
-            {{ session('status') }}
-        </div>
-    @endif
-  </div>
     <div class="row">
-        <form action="{{ route('admin.apartments.store') }}" method="post" enctype="multipart/form-data">
+        @if (session('status'))
+            <div class="alert alert-danger">
+                {{ session('status') }}
+            </div>
+        @endif
+    </div>
+    <div class="row">
+        <form action="{{ route('admin.apartments.store') }}" method="post" enctype="multipart/form-data" id="MyForm">
             <a class="btn btn-primary" href="{{url()->previous()}}">CANCEL</a>
             @csrf
             @method('POST')
@@ -19,6 +19,7 @@
                 <label for="title" class="form-label text-uppercase fw-bold">Title</label>
                 <input type="text" class="form-control" id="title" name="title" value="{{ old('title') }}">
             </div>
+            <p id="demo"></p>
             @error('title')
                 <div class="alert alert-danger">{{ $message }}</div>
             @enderror
@@ -121,8 +122,27 @@
                     Not Available
                 </label>
             </div>
-            <button type="submit" class="btn btn-primary">Save</button>
+            <button type="button" class="btn btn-primary" onclick="validationForm()" value="Submit form">Save</button>
         </form>
     </div>
 </div>
+
+<script>
+function validationForm() {
+    let title = document.getElementById('title').value;
+    let message;
+
+    if (!title) {
+        message = 'input not valid';
+        document.getElementById('demo').innerHTML = message;
+        return false;
+    } else {
+        
+        message = "";
+        document.getElementById('demo').innerHTML = message;
+        document.getElementById('MyForm').submit();
+        return true;
+    }
+}
+</script>
 @endsection

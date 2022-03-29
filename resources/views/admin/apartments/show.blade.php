@@ -12,7 +12,7 @@
         <div class="row">
             <div class="col">
                 <h1>{{ $apartment->title }}</h1>
-                <img src="{{ asset('storage/uploads/' . $apartment->image) }}" alt="{{ $apartment->title }}"
+                <img src="{{ asset('storage/' . $apartment->image) }}" alt="{{ $apartment->title }}"
                     class="img-fluid">
                 <h3>Price: {{ $apartment->price }}&euro;</h3>
                 <h3>Rooms: {{ $apartment->rooms }}</h3>
