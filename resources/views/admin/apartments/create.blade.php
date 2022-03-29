@@ -22,7 +22,13 @@
             @error('title')
                 <div class="alert alert-danger">{{ $message }}</div>
             @enderror
-
+            <div class="mb-3">
+                <label for="image" class="form-label text-uppercase fw-bold">Image</label>
+                <input class="form-control" type="file" id="image" name="image">
+            </div>
+            @error('image')
+                <div class="alert alert-danger mt-3"> {{ $message }}</div>
+            @enderror
             <div class="mb-3">
                 <label for="price" class="form-label text-uppercase fw-bold">Price</label>
             <input type="text" class="form-control" id="price" name="price" value="{{ old('price') }}">
@@ -54,7 +60,24 @@
             @error('bathrooms')
                 <div class="alert alert-danger">{{ $message }}</div>
             @enderror
-
+            @error('services.*')  
+            <div class="alert alert-danger mt-3">
+                {{ $message }}
+            </div>
+            @enderror
+            <fieldset class="mb-3">
+                <legend>Services</legend>
+                @foreach ($services as $service)
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="{{ $service->id }}" name="services[]"
+                        {{ in_array($service->id, old('services', [])) ? 'checked' : '' }}
+                        >
+                        <label class="form-check-label" for="flexCheckDefault">
+                            {{ $service->name }}
+                        </label>
+                </div>
+                @endforeach
+            </fieldset>
             <div class="mb-3">
                 <label for="square" class="form-label text-uppercase fw-bold">Square</label>
             <input type="text" class="form-control" id="square" name="square" value="{{ old('square') }}">
@@ -86,42 +109,18 @@
             @error('longitude')
                 <div class="alert alert-danger">{{ $message }}</div>
             @enderror
-
-            @error('services.*')  
-            <div class="alert alert-danger mt-3">
-              {{ $message }}
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="visible" id="available" value="1" checked>
+                <label class="form-check-label" for="available">
+                    Available
+                </label>
             </div>
-            @enderror
-            <fieldset class="mb-3">
-                <legend>Services</legend>
-                @foreach ($services as $service)
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="{{ $service->id }}" name="services[]"
-                        {{ in_array($service->id, old('services', [])) ? 'checked' : '' }}
-                        >
-                        <label class="form-check-label" for="flexCheckDefault">
-                            {{ $service->name }}
-                        </label>
-                </div>
-                @endforeach
-            </fieldset>
-
-            <div class="mb-3">
-                <label for="visible" class="form-label text-uppercase fw-bold">Visible</label>
-            <input type="text" class="form-control" id="visible" name="visible" value="{{ old('visible') }}">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="visible" id="notAvailable" value="0">
+                <label class="form-check-label" for="notAvailable">
+                    Not Available
+                </label>
             </div>
-            @error('visible')
-                <div class="alert alert-danger">{{ $message }}</div>
-            @enderror
-
-            <div class="mb-3">
-                <label for="image" class="form-label text-uppercase fw-bold">Image</label>
-                <input class="form-control" type="file" id="image" name="image">
-            </div>
-            @error('image')
-                <div class="alert alert-danger mt-3"> {{ $message }}</div>
-            @enderror
-
             <button type="submit" class="btn btn-primary">Save</button>
         </form>
     </div>

@@ -166,7 +166,7 @@ class ApartmentController extends Controller
         } else {
             $apartment->services()->detach();
         }
-        return redirect()->route('admin.apartments.show', $apartment);
+        return redirect()->route('admin.apartments.show', $apartment->slug);
     }
 
     /**

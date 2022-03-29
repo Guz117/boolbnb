@@ -14,17 +14,18 @@
                 <h1>{{ $apartment->title }}</h1>
                 <img src="{{ asset('storage/uploads/' . $apartment->image) }}" alt="{{ $apartment->title }}"
                     class="img-fluid">
-                <h3>{{ $apartment->address }}</h3>
                 <h3>Price: {{ $apartment->price }}&euro;</h3>
                 <h3>Rooms: {{ $apartment->rooms }}</h3>
+                <h3>Beds: {{ $apartment->beds }}</h3>
                 <h3>Bathrooms: {{ $apartment->bathrooms }}</h3>
                 <h3>Services:</h3>
                 @foreach ($apartment->services()->get() as $service)
-                    <span class="badge rounded-pill bg-secondary">
-                        {{ $service->name }}
-                    </span>
+                <span class="badge rounded-pill bg-secondary">
+                    {{ $service->name }}
+                </span>
                 @endforeach
                 <h3>Square: {{ $apartment->square }}m<sup>3</sup></h3>
+                <h3>{{ $apartment->address }}</h3>
                 <h3>Latitude: {{ $apartment->latitude }}</h3>
                 <h3>Longitude: {{ $apartment->longitude }}</h3>
             </div>
