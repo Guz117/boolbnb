@@ -45,6 +45,7 @@
                 <label for="rooms" class="form-label text-uppercase fw-bold">Rooms</label>
             <input type="text" class="form-control" id="rooms" name="rooms" value="{{ old('rooms') }}">
             </div>
+            <p id="demo3"></p>
             @error('rooms')
                 <div class="alert alert-danger">{{ $message }}</div>
             @enderror
@@ -53,6 +54,7 @@
                 <label for="beds" class="form-label text-uppercase fw-bold">Beds</label>
             <input type="text" class="form-control" id="beds" name="beds" value="{{ old('beds') }}">
             </div>
+            <p id="demo4"></p>
             @error('beds')
                 <div class="alert alert-danger">{{ $message }}</div>
             @enderror
@@ -61,6 +63,7 @@
                 <label for="bathrooms" class="form-label text-uppercase fw-bold">Bathrooms</label>
             <input type="text" class="form-control" id="bathrooms" name="bathrooms" value="{{ old('bathrooms') }}">
             </div>
+            <p id="demo5"></p>
             @error('bathrooms')
                 <div class="alert alert-danger">{{ $message }}</div>
             @enderror
@@ -88,6 +91,7 @@
                 <label for="square" class="form-label text-uppercase fw-bold">Square</label>
             <input type="text" class="form-control" id="square" name="square" value="{{ old('square') }}">
             </div>
+            <p id="demo6"></p>
             @error('square')
                 <div class="alert alert-danger">{{ $message }}</div>
             @enderror
@@ -96,6 +100,7 @@
                 <label for="address" class="form-label text-uppercase fw-bold">Address</label>
             <input type="text" class="form-control" id="address" name="address" value="{{ old('address') }}">
             </div>
+            <p id="demo7"></p>
             @error('address')
                 <div class="alert alert-danger">{{ $message }}</div>
             @enderror
@@ -104,6 +109,7 @@
                 <label for="latitude" class="form-label text-uppercase fw-bold">Latitude</label>
             <input type="text" class="form-control" id="latitude" name="latitude" value="{{ old('latitude') }}">
             </div>
+            <p id="demo8"></p>
             @error('latitude')
                 <div class="alert alert-danger">{{ $message }}</div>
             @enderror
@@ -112,6 +118,7 @@
                 <label for="longitude" class="form-label text-uppercase fw-bold">Longitude</label>
             <input type="text" class="form-control" id="longitude" name="longitude" value="{{ old('longitude') }}">
             </div>
+            <p id="demo9"></p>
             @error('longitude')
                 <div class="alert alert-danger">{{ $message }}</div>
             @enderror
@@ -128,6 +135,8 @@
                     Not Available
                 </label>
             </div>
+
+
             <button type="button" class="btn btn-primary" onclick="validationForm()" value="Submit form">Save</button>
         </form>
     </div>
@@ -137,27 +146,74 @@
 function validationForm() {
     let title = document.getElementById('title').value;
     let price = document.getElementById('price').value;
+    let rooms = document.getElementById('rooms').value;
+    let beds = document.getElementById('beds').value;
+    let bathrooms = document.getElementById('bathrooms').value;
+    let square = document.getElementById('square').value;
+    let address = document.getElementById('address').value;
+    let latitude = document.getElementById('latitude').value;
+    let longitude = document.getElementById('longitude').value;
+    
     document.getElementById('demo2').innerHTML = null;
     let message = "";
     let error = 0;
 
-    if (!title || title.trim()) {
+    if (!title || !title.trim()) {
         message = 'title not valid';
-        error = error + 1;
+        error = 1;
         document.getElementById('demo1').innerHTML = message;
     } 
 
     if (price < 0 || !price || isNaN(price)) {
         message = 'price not valid';
-        error = error + 1;
+        error = 1;
         price = "";
-        console.log(price);
         document.getElementById('demo2').innerHTML = message;
     }
-
+    if (rooms < 0 || !rooms || isNaN(rooms)) {
+        message = 'Rooms must be at least one';
+        error = 1;
+        rooms = "";
+        document.getElementById('demo3').innerHTML = message;
+    }
+    if (beds < 0 || !beds || isNaN(beds)) {
+        message = 'Beds must be at least one';
+        error = 1;
+        beds = "";
+        document.getElementById('demo4').innerHTML = message;
+    }
+    if (bathrooms < 0 || !bathrooms || isNaN(bathrooms)) {
+        message = 'Bathrooms must be at least one';
+        error = 1;
+        bathrooms = "";
+        document.getElementById('demo5').innerHTML = message;
+    }
+    if (square < 0 || !square || isNaN(square)) {
+        message = 'Square not valid';
+        error = 1;
+        square = "";
+        document.getElementById('demo6').innerHTML = message;
+    }
+    if (!address || !address.trim()) {
+        message = 'Address not valid';
+        error = 1;
+        address = "";
+        document.getElementById('demo7').innerHTML = message;
+    }
+    if (latitude < -90 || latitude > 90 || !latitude ) {
+        message = 'Latitude not valid';
+        error = 1;
+        latitude = "";
+        document.getElementById('demo8').innerHTML = message;
+    }
+    if (longitude < -180 || longitude > 180 || !longitude ) {
+        message = 'Longitude not valid';
+        error = 1;
+        longitude = "";
+        document.getElementById('demo9').innerHTML = message;
+    }
     if (error == 0) {
         message = "";
-        document.getElementById('demo').innerHTML = message;
         document.getElementById('MyForm').submit();
         return true;
     } else {
