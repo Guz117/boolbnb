@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -109,14 +109,14 @@ eval("var g;\n\n// This works in non-strict mode\ng = (function() {\n\treturn th
 
 /***/ }),
 
-/***/ 1:
+/***/ 2:
 /*!*****************************************************!*\
   !*** multi ./node_modules/popper.js/dist/popper.js ***!
   \*****************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Boolean\Esercizio_Finale_Boolean\boolbnb\node_modules\popper.js\dist\popper.js */"./node_modules/popper.js/dist/popper.js");
+module.exports = __webpack_require__(/*! /Users/daniele/php_laravel/EsercizioFinale/boolbnb/node_modules/popper.js/dist/popper.js */"./node_modules/popper.js/dist/popper.js");
 
 
 /***/ })
