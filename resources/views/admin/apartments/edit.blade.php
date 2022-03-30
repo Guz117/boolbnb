@@ -31,7 +31,7 @@
                         @enderror
                         @if (!empty($apartment->image))
                         <div class="mb-3">
-                            <img class="img-fluid" src="{{ asset('storage/uploads/' . $apartment->image) }}"
+                            <img class="img-fluid" src="{{ asset('storage/' . $apartment->image) }}"
                             alt="{{ $apartment->title }}">
                         </div>
                         @endif
